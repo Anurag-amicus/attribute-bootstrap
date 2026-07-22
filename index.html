@@ -1,0 +1,346 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Attribute Assignments</title>
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Mobile Header (Visible on small screens) -->
+    <header class="mobile-header d-lg-none d-flex align-items-center justify-content-between p-3 border-bottom bg-white sticky-top shadow-sm">
+      <div class="d-flex align-items-center">
+        <button id="mobileSidebarToggle" class="btn btn-link p-0 me-3 text-decoration-none" aria-label="Open Navigation">
+          <i class="fa-solid fa-bars fs-4 text-primary-color"></i>
+        </button>
+        <h1 class="h5 fw-bold text-dark m-0">Attribute Assignments</h1>
+      </div>
+      <img src="assets/images/profile.png" alt="Profile" class="profile-img rounded-circle" style="width: 36px; height: 36px;" />
+    </header>
+
+    <!-- Sidebar Backdrop Overlay for Mobile -->
+    <div id="sidebarBackdrop" class="sidebar-backdrop"></div>
+
+    <div id="main-container" class="d-flex vh-100 overflow-hidden">
+      <!-- Sidebar -->
+      <aside id="sidebar" class="sidebar d-flex flex-column">
+        <!-- Profile Section -->
+        <div class="profile-section d-flex align-items-center">
+          <img
+            src="Passport Photo.png"
+            alt="Pramod Agrawal Profile"
+            class="profile-img rounded-circle me-3"
+          />
+          <div class="d-flex flex-column">
+            <span class="text-white profile-name">Pramod Agrawal</span>
+            <span class="text-white opacity-75 designation">Global Admin</span>
+          </div>
+        </div>
+
+        <!-- Section Title -->
+        <div class="sidebar-category-header">Master Data Attributes</div>
+
+        <!-- Navigation -->
+        <nav class="w-100">
+          <ul class="nav flex-column nav-custom">
+            <li class="nav-item">
+              <a href="#" class="nav-link-custom active">
+                <i class="fa-solid fa-house me-3"></i>
+                <span class="sidebar-text">Home Page</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link-custom">
+                <i class="fa-solid fa-gear me-3"></i>
+                <span class="sidebar-text">Manage Attributes</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link-custom">
+                <i class="fa-solid fa-lock me-3"></i>
+                <span class="sidebar-text">Security</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+
+        <!-- Sidebar Bottom Logo -->
+        <div class="sidebar-logo-container mt-auto">
+          <img
+            src="logo.png"
+            alt="Buckman Logo"
+            class="sidebar-logo img-fluid"
+          />
+        </div>
+
+        <!-- Desktop Collapse/Expand Toggle Button -->
+        <button
+          class="toggle-btn d-none d-lg-flex"
+          id="sidebarToggle"
+          aria-label="Toggle Sidebar"
+        >
+          <i class="fa-solid fa-chevron-left"></i>
+        </button>
+      </aside>
+
+      <!-- Main Content Area -->
+      <main id="mainContent" class="main-content flex-grow-1 overflow-auto p-4 bg-white">
+        <!-- Header Section -->
+        <header class="d-flex flex-column flex-md-row justify-content-between align-items-md-center mb-4 pb-3 border-bottom">
+          <div>
+            <h2 class="h4 fw-bold text-dark mb-1">Attribute Assignments</h2>
+            <nav aria-label="breadcrumb">
+              <ol class="breadcrumb mb-0 fs-7">
+                <li class="breadcrumb-item">
+                  <a href="#" class="text-primary-color text-decoration-none">Homepage</a>
+                </li>
+                <li class="breadcrumb-item">
+                  <a href="#" class="text-primary-color text-decoration-none">Listings</a>
+                </li>
+                <li class="breadcrumb-item active" aria-current="page">
+                  <a href="#" class="text-primary-color text-decoration-underline">100004</a>
+                </li>
+              </ol>
+            </nav>
+          </div>
+          <div class="d-flex gap-2 mt-3 mt-md-0 flex-wrap">
+            <button class="btn-remove-mappings">
+              <i class="fa-regular fa-trash-can me-2"></i>Remove all mappings
+            </button>
+            <button class="btn-cancel-custom">Cancel</button>
+            <button class="btn-save-custom">
+              <i class="fa-solid fa-floppy-disk me-2"></i>Save
+            </button>
+          </div>
+        </header>
+
+        <!-- Attribute Details Info Grid -->
+        <div class="row g-3 mb-4">
+          <!-- Row 1 -->
+          <div class="col-6 col-md-3">
+            <span class="info-label">Business Unit</span>
+            <div class="info-value">Paper</div>
+          </div>
+          <div class="col-6 col-md-3">
+            <span class="info-label">Company Code</span>
+            <div class="info-value">E_ANZ</div>
+          </div>
+          <div class="col-6 col-md-3">
+            <span class="info-label">Customer Parent</span>
+            <div class="info-value">Santa Maria Guarapuava PR (BR)</div>
+          </div>
+          <div class="col-6 col-md-3">
+            <span class="info-label">Customer</span>
+            <div class="info-value">E_0508S</div>
+          </div>
+
+          <!-- Row 2 -->
+          <div class="col-6 col-md-3">
+            <span class="info-label">Customer Industry</span>
+            <div class="info-value">Regional Waters</div>
+          </div>
+          <div class="col-6 col-md-3">
+            <span class="info-label">Customer Area</span>
+            <div class="info-value">E_200PT3</div>
+          </div>
+          <div class="col-6 col-md-3">
+            <span class="info-label">Employee</span>
+            <div class="info-value">Riaz Abdul Karrim</div>
+          </div>
+          <div class="col-6 col-md-3">
+            <span class="info-label">Material</span>
+            <div class="info-value">BUFLOC 5031</div>
+          </div>
+
+          <!-- Row 3 -->
+          <div class="col-6 col-md-3">
+            <span class="info-label">TX Industry</span>
+            <div class="info-value">Regional Waters</div>
+          </div>
+          <div class="col-6 col-md-3">
+            <span class="info-label">Rolling 12 month sale (USD)</span>
+            <div class="info-value">22135.00</div>
+          </div>
+          <div class="col-12 col-md-6">
+            <span class="info-label">Additional Information</span>
+            <input
+              type="text"
+              class="form-control form-control-sm form-select-custom w-100"
+              style="background-image: none !important;"
+              placeholder="Leave a note here"
+            />
+          </div>
+        </div>
+
+        <hr class="my-3 text-secondary opacity-25" />
+
+        <!-- Accordion Controls -->
+        <div class="d-flex justify-content-end mb-3 gap-3 fs-7">
+          <a href="#" id="collapseAllBtn" class="text-primary-color text-decoration-none fw-semibold">Collapse All</a>
+          <span class="text-muted">|</span>
+          <a href="#" id="expandAllBtn" class="text-primary-color text-decoration-none fw-semibold">Expand All</a>
+        </div>
+
+        <!-- Accordion Sections -->
+        <div class="accordion custom-accordion d-flex flex-column gap-3" id="attributeAccordion">
+          <!-- 1. Sales Item -->
+          <div class="accordion-item shadow-sm border rounded">
+            <h2 class="accordion-header" id="headingOne">
+              <button
+                class="accordion-button collapsed px-4 py-3"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseOne"
+                aria-expanded="false"
+                aria-controls="collapseOne"
+              >
+                <div class="row align-items-center w-100 m-0">
+                  <div class="col-12 col-lg-4 d-flex align-items-center ps-0 mb-2 mb-lg-0">
+                    <i class="fa-solid fa-circle-plus text-primary-color me-3 accordion-icon"></i>
+                    <span class="fw-bold text-dark fs-6">Sales</span>
+                  </div>
+                  <div class="col-12 col-lg-8 pe-0">
+                    <div class="d-flex align-items-center justify-content-between flex-wrap gap-2 fs-7">
+                      <div onclick="event.stopPropagation()" style="min-width: 170px;">
+                        <select class="custom-status-select w-100">
+                          <option selected>Active</option>
+                          <option value="1">Pending Validation</option>
+                        </select>
+                      </div>
+                      <div class="text-nowrap">
+                        <span class="fw-bold text-dark me-1">Validated</span>
+                        <span class="text-primary-color">jchauhan / 25 Sep 2020</span>
+                      </div>
+                      <div class="text-nowrap">
+                        <span class="fw-bold text-dark me-1">Updated</span>
+                        <span class="text-primary-color">jchauhan / 25 Sep 2020</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </button>
+            </h2>
+            <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne">
+              <div class="accordion-body px-4 pb-4 pt-3 border-top">
+                <div class="row g-3 fs-7">
+                  <div class="col-md-4">
+                    <label class="form-label fw-bold text-dark small mb-1">Application Group <span class="text-danger">*</span></label>
+                    <select class="form-select-custom w-100"><option selected>Choose Option</option></select>
+                  </div>
+                  <div class="col-md-4">
+                    <label class="form-label fw-bold text-dark small mb-1">Strategic move <span class="text-danger">*</span></label>
+                    <select class="form-select-custom w-100"><option selected>Choose Option</option></select>
+                  </div>
+                  <div class="col-md-4">
+                    <label class="form-label fw-bold text-dark small mb-1">S&D1 <span class="text-danger">*</span></label>
+                    <select class="form-select-custom w-100"><option selected>Choose Option</option></select>
+                  </div>
+                  <div class="col-md-4">
+                    <label class="form-label fw-bold text-dark small mb-1">S&D 2</label>
+                    <select class="form-select-custom w-100"><option selected>Choose Option</option></select>
+                  </div>
+                  <div class="col-md-4">
+                    <label class="form-label fw-bold text-dark small mb-1">S&D 3</label>
+                    <select class="form-select-custom w-100"><option selected>Choose Option</option></select>
+                  </div>
+                  <div class="col-md-4">
+                    <label class="form-label fw-bold text-dark small mb-1">S&D 4</label>
+                    <select class="form-select-custom w-100"><option selected>Choose Option</option></select>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 2. Strategic Marketing Item (EXPANDED BY DEFAULT AS IN SCREENSHOT) -->
+          <div class="accordion-item shadow-sm border rounded">
+            <h2 class="accordion-header" id="headingTwo">
+              <button
+                class="accordion-button px-4 py-3"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseTwo"
+                aria-expanded="true"
+                aria-controls="collapseTwo"
+              >
+                <div class="row align-items-center w-100 m-0">
+                  <div class="col-12 col-lg-4 d-flex align-items-center ps-0 mb-2 mb-lg-0">
+                    <i class="fa-solid fa-circle-minus text-primary-color me-3 accordion-icon"></i>
+                    <span class="fw-bold text-dark fs-6">Strategic Marketing</span>
+                  </div>
+                  <div class="col-12 col-lg-8 pe-0">
+                    <div class="d-flex align-items-center justify-content-between flex-wrap gap-2 fs-7">
+                      <div onclick="event.stopPropagation()" style="min-width: 170px;">
+                        <select class="custom-status-select w-100">
+                          <option selected>Pending Validation</option>
+                          <option value="1">Active</option>
+                        </select>
+                      </div>
+                      <div class="text-nowrap">
+                        <span class="fw-bold text-dark me-1">Validated</span>
+                        <span class="text-dark">N/A</span>
+                      </div>
+                      <div class="text-nowrap">
+                        <span class="fw-bold text-dark me-1">Updated</span>
+                        <span class="text-primary-color">jchauhan / 25 Sep 2020</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </button>
+            </h2>
+            <div id="collapseTwo" class="accordion-collapse collapse show" aria-labelledby="headingTwo">
+              <div class="accordion-body px-4 pb-4 pt-3 border-top">
+                <div class="row g-3 fs-7">
+                  <div class="col-md-4">
+                    <label class="form-label fw-bold text-dark small mb-1">Application Group <span class="text-danger">*</span></label>
+                    <select class="form-select-custom w-100"><option selected>Choose Option</option></select>
+                  </div>
+                  <div class="col-md-4">
+                    <label class="form-label fw-bold text-dark small mb-1">Strategic move <span class="text-danger">*</span></label>
+                    <select class="form-select-custom w-100"><option selected>Choose Option</option></select>
+                  </div>
+                  <div class="col-md-4">
+                    <label class="form-label fw-bold text-dark small mb-1">S&D1 <span class="text-danger">*</span></label>
+                    <select class="form-select-custom w-100"><option selected>Choose Option</option></select>
+                  </div>
+                  <div class="col-md-4">
+                    <label class="form-label fw-bold text-dark small mb-1">S&D 2</label>
+                    <select class="form-select-custom w-100"><option selected>Choose Option</option></select>
+                  </div>
+                  <div class="col-md-4">
+                    <label class="form-label fw-bold text-dark small mb-1">S&D 3</label>
+                    <select class="form-select-custom w-100"><option selected>Choose Option</option></select>
+                  </div>
+                  <div class="col-md-4">
+                    <label class="form-label fw-bold text-dark small mb-1">S&D 4</label>
+                    <select class="form-select-custom w-100"><option selected>Choose Option</option></select>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+  </body>
+</html>
