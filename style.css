@@ -1,13 +1,13 @@
 :root {
-    --primary-color: #009677;
+    --primary-color: #00967c;
     --primary-color-hover: #007e63;
     --sidebar-width: 250px;
     --bg-color: #ffffff;
-    --text-dark: #2d3748;
+    --text-dark: #111111;
     --text-muted: #718096;
     --border-color: #e2e8f0;
     --danger-color: #ff6b4a;
-    --toggle-green: #8cc63f;
+    --toggle-green: #70ca50;
 }
 
 * {
@@ -135,7 +135,10 @@ html, body {
 }
 
 .sidebar-logo-container {
-    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 25px;
 }
 
 .sidebar-logo-container img {
@@ -152,7 +155,7 @@ html, body {
     height: 28px;
     border-radius: 50%;
     background-color: var(--toggle-green);
-    color: #ffffff;
+    color:var(--primary-color);
     border: none;
     display: flex;
     align-items: center;
@@ -227,7 +230,7 @@ html, body {
 /* Master Data Info Grid */
 .info-label {
     font-size: 0.875rem;
-    font-weight: 700;
+    font-weight: 600;
     color: var(--text-dark);
     margin-bottom: 2px;
     display: block;
@@ -236,7 +239,7 @@ html, body {
 .info-value {
     color: var(--text-muted);
     font-size: 0.875rem;
-    font-weight: 500;
+    font-weight: 400;
     word-break: break-word;
 }
 
@@ -248,7 +251,7 @@ html, body {
     color: var(--text-dark) !important;
     background-color: #ffffff;
     padding: 6px 30px 6px 12px;
-    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23009677' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e") !important;
+    background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHZpZXdCb3g9JzAgMCAxNiAxNic+PHBhdGggZmlsbD0nIzAwOTY3NycgZD0nTTIuMzUgNWgxMS4zYS41LjUgMCAwIDEgLjM1Ljg1bC01LjY1IDUuNjVhLjUuNSAwIDAgMS0uNyAwbC01LjY1LTUuNjVBLjUuNSAwIDAgMSAyLjM1IDV6Jy8+PC9zdmc+") !important;
     background-repeat: no-repeat !important;
     background-position: right 10px center !important;
     background-size: 14px 10px !important;
@@ -270,7 +273,7 @@ html, body {
     font-size: 0.8125rem;
     color: var(--text-muted);
     background-color: #ffffff;
-    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23009677' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e") !important;
+    background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHZpZXdCb3g9JzAgMCAxNiAxNic+PHBhdGggZmlsbD0nIzAwOTY3NycgZD0nTTIuMzUgNWgxMS4zYS41LjUgMCAwIDEgLjM1Ljg1bC01LjY1IDUuNjVhLjUuNSAwIDAgMS0uNyAwbC01LjY1LTUuNjVBLjUuNSAwIDAgMSAyLjM1IDV6Jy8+PC9zdmc+") !important;
     background-repeat: no-repeat !important;
     background-position: right 10px center !important;
     background-size: 14px 10px !important;
@@ -332,4 +335,8 @@ html, body {
     .main-content {
         height: calc(100vh - 60px);
     }
+}
+
+.bg-lowerhalf{
+    background-color: #f5f4f4;
 }
