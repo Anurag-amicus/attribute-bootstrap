@@ -113,7 +113,7 @@
         id="mainContent"
         class="main-content flex-grow-1 overflow-auto bg-lowerhalf"
       >
-        <div class="px-4  pt-4 pb-2 mb-3 bg-white border-bottom">
+        <div class="px-4 pt-4 pb-2 mb-3 bg-white border-bottom">
           <!-- Header Section -->
           <header
             class="d-flex flex-column flex-md-row justify-content-between align-items-md-center mb-4 pb-3 border-bottom"
@@ -154,7 +154,7 @@
           </header>
 
           <!-- Attribute Details Info Grid -->
-          <div class="row g-3 mb-4">
+          <div class="row g-3 mb-3">
             <!-- Row 1 -->
             <div class="col-6 col-md-3">
               <span class="info-label">Business Unit</span>
@@ -212,7 +212,6 @@
           </div>
         </div>
         <div class="px-4 pb-4">
-
           <!-- Accordion Controls -->
           <div class="d-flex justify-content-end mb-3 gap-3 fs-7">
             <a
@@ -237,53 +236,56 @@
             <!-- 1. Sales Item -->
             <div class="accordion-item shadow-sm border rounded">
               <h2 class="accordion-header" id="headingOne">
-                <button
-                  class="accordion-button collapsed px-4 py-3"
-                  type="button"
-                  data-bs-toggle="collapse"
-                  data-bs-target="#collapseOne"
-                  aria-expanded="false"
-                  aria-controls="collapseOne"
-                >
-                  <div class="row align-items-center w-100 m-0">
-                    <div
-                      class="col-12 col-lg-4 d-flex align-items-center ps-0 mb-2 mb-lg-0"
-                    >
-                      <i
-                        class="fa-solid fa-circle-plus text-primary-color me-3 accordion-icon"
-                      ></i>
-                      <span class="fw-bold text-dark fs-6">Sales</span>
-                    </div>
-                    <div class="col-12 col-lg-8 pe-0">
-                      <div
-                        class="d-flex row align-items-center flex-wrap fs-7"
-                      >
-                        <div
-                          onclick="event.stopPropagation()"
-                          style="min-width: 170px"
-                          class="col-lg-4"
+                <div class="accordion-header-content px-4 py-3">
+                  <div class="row w-100 align-items-center gy-3">
+                    <!-- Left Section -->
+                    <div class="col-12 col-lg-3">
+                      <div class="d-flex align-items-center">
+                        <button
+                          class="accordion-toggle-btn "
+                          type="button"
+                          data-bs-toggle="collapse"
+                          data-bs-target="#collapseOne"
+                          aria-expanded="false"
+                          aria-controls="collapseOne"
+                          aria-label="Expand Sales"
                         >
-                          <select class="custom-status-select form-select w-100">
+                          <i class="fa-solid fa-circle-plus accordion-icon me-3"></i>
+                          <span class="fw-bold text-dark fs-7"> Sales </span>
+                        </button>
+                      </div>
+                    </div>
+
+                    <!-- Right Section -->
+                    <div class="col-12 col-lg-9">
+                      <div class="row align-items-center gy-3 fs-7">
+                        <!-- Status -->
+                        <div class="col-12 col-md-4">
+                          <select class="custom-status-select form-select">
                             <option selected>Active</option>
-                            <option value="1">Pending Validation</option>
+                            <option>Pending Validation</option>
                           </select>
                         </div>
-                        <div class="text-nowrap col-lg-4">
-                          <span class="fw-bold text-dark me-1">Validated</span>
-                          <span class="text-primary-color"
-                            >jchauhan / 25 Sep 2020</span
-                          >
+
+                        <!-- Validated -->
+                        <div class="col-12 col-md-4">
+                          <span class="fw-bold me-1">Validated</span>
+                          <span class="text-primary-color">
+                            jchauhan <span class="text-dark">/</span> 25 Sep 2020
+                          </span>
                         </div>
-                        <div class="text-nowrap col-lg-4">
-                          <span class="fw-bold text-dark me-1">Updated</span>
-                          <span class="text-primary-color"
-                            >jchauhan / 25 Sep 2020</span
-                          >
+
+                        <!-- Updated -->
+                        <div class="col-12 col-md-4">
+                          <span class="fw-bold me-1">Updated</span>
+                          <span class="text-primary-color">
+                            jchauhan <span class="text-dark">/</span> 25 Sep 2020
+                          </span>
                         </div>
                       </div>
                     </div>
                   </div>
-                </button>
+                </div>
               </h2>
               <div
                 id="collapseOne"
@@ -350,53 +352,58 @@
             <!-- 2. Strategic Marketing Item (EXPANDED BY DEFAULT AS IN SCREENSHOT) -->
             <div class="accordion-item shadow-sm border rounded">
               <h2 class="accordion-header" id="headingTwo">
-                <button
-                  class="accordion-button px-4 py-3"
-                  type="button"
-                  data-bs-toggle="collapse"
-                  data-bs-target="#collapseTwo"
-                  aria-expanded="true"
-                  aria-controls="collapseTwo"
-                >
-                  <div class="row align-items-center w-100 m-0">
-                    <div
-                      class="col-12 col-lg-4 d-flex align-items-center ps-0 mb-2 mb-lg-0"
-                    >
-                      <i
-                        class="fa-solid fa-circle-minus text-primary-color me-3 accordion-icon"
-                      ></i>
-                      <span class="fw-bold text-dark fs-6"
-                        >Strategic Marketing</span
-                      >
-                    </div>
-                    <div class="col-12 col-lg-8 pe-0">
-                      <div
-                        class="row align-items-center flex-wrap fs-7"
-                      >
-                        <div
-                          onclick="event.stopPropagation()"
-                          style="min-width: 170px"
-                          class="col-lg-4"
+                <div class="accordion-header-content px-4 py-3">
+                  <div class="row w-100 align-items-center gy-3">
+                    <!-- Left Section -->
+                    <div class="col-12 col-lg-3">
+                      <div class="d-flex align-items-center">
+                        <button
+                          class="accordion-toggle-btn"
+                          type="button"
+                          data-bs-toggle="collapse"
+                          data-bs-target="#collapseTwo"
+                          aria-expanded="true"
+                          aria-controls="collapseTwo"
+                          aria-label="Collapse Strategic Marketing"
                         >
-                          <select class="custom-status-select w-100">
+                          <i
+                            class="fa-solid fa-circle-minus accordion-icon me-3"
+                          ></i>
+                          <span class="fw-bold text-dark fs-7">
+                            Strategic Marketing
+                          </span>
+                        </button>
+                      </div>
+                    </div>
+
+                    <!-- Right Section -->
+                    <div class="col-12 col-lg-9">
+                      <div class="row align-items-center gy-3 fs-7">
+                        <!-- Status -->
+                        <div class="col-12 col-md-4">
+                          <select class="custom-status-select form-select">
                             <option selected>Pending Validation</option>
-                            <option value="1">Active</option>
+                            <option>Active</option>
                           </select>
                         </div>
-                        <div class="text-nowrap col-lg-4">
+
+                        <!-- Validated -->
+                        <div class="col-12 col-md-4">
                           <span class="fw-bold text-dark me-1">Validated</span>
                           <span class="text-dark">N/A</span>
                         </div>
-                        <div class="text-nowrap col-lg-4">
+
+                        <!-- Updated -->
+                        <div class="col-12 col-md-4">
                           <span class="fw-bold text-dark me-1">Updated</span>
-                          <span class="text-primary-color"
-                            >jchauhan / 25 Sep 2020</span
-                          >
+                          <span class="text-primary-color">
+                            jchauhan <span class="text-dark">/</span> 25 Sep 2020
+                          </span>
                         </div>
                       </div>
                     </div>
                   </div>
-                </button>
+                </div>
               </h2>
               <div
                 id="collapseTwo"
